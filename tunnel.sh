@@ -16,6 +16,6 @@ fi
 
 mkdir -p $(dirname $log)
 while true; do
-    autossh -M 0 -i ${HOME}/.ssh/id_rsa_home -N -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -R ${remote_port}:localhost:22 remote@raincity.io >>$log 2>&1
+    autossh -M 0 -i ${HOME}/.ssh/id_rsa_home -N -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -R ${remote_port}:localhost:22 remote@kronos.raincity.io >>$log 2>&1
     sleep 1
 done
